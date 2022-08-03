@@ -1,0 +1,48 @@
+---
+title: "Creating and working with vectors"
+author: "Michael Zargari"
+date: "`r format(Sys.time(), '%d-%B-%Y')`"
+output: html_document
+---
+
+```{r, echo = FALSE, warning=FALSE}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+### Make some vectors
+
+```{r}
+marmots <- c("blue", "green", 4, "yellow")
+
+# Check Class
+class(marmots)
+```
+
+```{r}
+ pika <- c(12.4, 6.8, 2.9, 8.8, 8.5)
+ 
+ # Check Class
+class(pika)
+```
+
+```{r}
+bananas <- c(1, 2, 3) 
+apples <- c( 6, 7, 8) 
+
+bananas + apples   # addition 
+bananas - apples   # subtraction
+bananas * apples   # multiplication 
+bananas / apples   # division 
+
+bananas %*% apples # dot product
+```
+
+### Matrices
+
+```{r}
+my_values <- seq(from = 1, to = 10)
+
+my_matrix <- matrix(data = my_values, nrow = 2, ncol = 5, byrow = TRUE)
+my_matrix
+```
